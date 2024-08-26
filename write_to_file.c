@@ -1,6 +1,6 @@
 #include "studentmgmt.h"
 void write_to_file() {
-    FILE *fptr;
+   FILE *fptr;
     fptr = fopen("students.txt", "w");
     if (fptr == NULL) {
         printf("Error opening file!\n");

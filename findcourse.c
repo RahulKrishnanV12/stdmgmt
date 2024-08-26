@@ -1,38 +1,29 @@
 #include "studentmgmt.h"
 
-void find_c()
+void findcourse()
 {
 	int id;
-	printf("Enter the course ID \n");
-	scanf("%d", &id);
-	int c = 0;
-
-	for (int j = 1; j <= i; j++) {
-		for (int d = 0; d < 5; d++) {
-			if (id == st[j].cid[d]) {
-
-				printf(
-					"The Students Details are\n");
-				printf(
-					"The First name is %s\n",
-					st[i].fname);
-				printf(
-					"The Last name is %s\n",
-					st[i].lname);
-				printf(
-					"The Roll Number is %d\n ",
-					st[i].roll);
-				printf(
-					"The CGPA is %f\n",
-					st[i].cgpa);
-
-				c = 1;
-
-				break;
-			}
-			else
-				printf(
-					"The First Name not Found\n");
-		}
-	}
+    printf("Enter the course ID: ");
+    while (scanf("%d", &id) != 1) {
+        printf("Invalid input! Please enter an integer for the course ID: ");
+        clear_input_buffer();
+    }
+    clear_input_buffer();
+    int c = 0;
+    for (int j = 0; j < i; j++) {
+        for (int d = 0; d < 5; d++) {
+            if (id == st[j].cid[d]) {
+                printf("The Students Details are\n");
+                printf("The First name is %s\n", st[j].fname);
+                printf("The Last name is %s\n", st[j].lname);
+                printf("The Roll Number is %d\n", st[j].roll);
+                printf("The CGPA is %f\n", st[j].cgpa);
+                c = 1;
+                break;
+            }
+        }
+    }
+    if (c == 0) {
+        printf("No students found for the given course ID\n");
+    }
 }

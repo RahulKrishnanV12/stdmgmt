@@ -8,10 +8,10 @@
 
 struct sinfo {
 	char fname[50];
-	char lname[50];
-	int roll;
-	float cgpa;
-	int cid[10];
+    char lname[50];
+    int roll;
+    float cgpa;
+    int cid[10];
 } st[55];
 
 

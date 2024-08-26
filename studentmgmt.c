@@ -64,7 +64,7 @@ void add_student() {
 }
 
 // Function to find the student by the roll number
-void find_rl() {
+void findrollno() {
     int x;
     printf("Enter the Roll Number of the student: ");
     while (scanf("%d", &x) != 1 || x <= 0) {
@@ -89,7 +89,7 @@ void find_rl() {
 }
 
 // Function to find the student by the first name
-void find_fn() {
+void findfirstname() {
     char a[50];
     printf("Enter the First Name of the student: ");
     scanf("%s", a);
@@ -114,7 +114,7 @@ void find_fn() {
 }
 
 // Function to find the students enrolled in a particular course
-void find_c() {
+void findcourse() {
     int id;
     printf("Enter the course ID: ");
     while (scanf("%d", &id) != 1) {
@@ -142,14 +142,14 @@ void find_c() {
 }
 
 // Function to print the total number of students
-void tot_s() {
+void findtotal() {
     printf("The total number of Students is %d\n", i);
     printf("\nYou can have a max of 50 students\n");
     printf("You can have %d more students\n", 50 - i);
 }
 
 // Function to delete a student by the roll number
-void del_s() {
+void deletestudent() {
     int a;
     printf("Enter the Roll Number which you want to delete: ");
     while (scanf("%d", &a) != 1 || a <= 0) {
@@ -170,7 +170,7 @@ void del_s() {
 }
 
 // Function to update a student's data
-void up_s() {
+void updatestudent() {
     printf("Enter the roll number to update the entry: ");
     int x;
     while (scanf("%d", &x) != 1 || x <= 0) {
@@ -272,22 +272,22 @@ int main() {
                 add_student();
                 break;
             case 2:
-                find_rl();
+                findrollno();
                 break;
             case 3:
-                find_fn();
+                findfirstname();
                 break;
             case 4:
-                find_c();
+                findcourse();
                 break;
             case 5:
-                tot_s();
+                findtotal();
                 break;
             case 6:
-                del_s();
+                deletestudent();
                 break;
             case 7:
-                up_s();
+                updatestudent();
                 break;
             default:
                 printf("Invalid choice! Please try again.\n");
